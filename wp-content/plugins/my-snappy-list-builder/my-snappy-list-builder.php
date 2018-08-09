@@ -18,6 +18,7 @@
 	1. HOOKS
         1.1 - call to register custom shortcodes
         1.2 - register custom admin column headers
+        1.3 - register custom admin column data
     
     2. SHORTCODES
         2.1 - slb_register_shortcodes()
@@ -48,6 +49,8 @@
 add_action('init', 'slb_register_shortcodes');
 //1.2
 add_filter('manage_edit-slb_subscriber_columns', 'slb_subscriber_column_headers');
+//1.3
+add_filter('manage_slb_subscriber_posts_custom_column', 'slb_subscriber_column_data', 1, 2);
 
 /* !2. SHORTCODES */
 // 2.1
